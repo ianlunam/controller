@@ -40,6 +40,10 @@ These took some working out. The above two reference documents each had some par
 | LCD Chip Select LCD_CS | 24 | 23 | Touch Panel Clock SCLK |
 | Touch Panel Chip Select TP_CS | 26 | 25 | GND |
 
+## AHT25 Pins
+
+![AHT25](images/AHT25-Pinout.png)
+
 ## ESP32 Connections
 
 | ESP32 Pin | Display Pin | AHT25 Pin |
@@ -54,9 +58,9 @@ These took some working out. The above two reference documents each had some par
 | VIN | #2 Display 5v | |
 | GND | #6 Display GND | |
 | 3.3v | | #1 VCC |
-| D22 | | #2 SDA |
+| D21 | | #2 SDA |
 | GND | | #3 GND |
-| D21 | | #4 SDL |
+| D22 | | #4 SDL |
 
 ## Code
 
