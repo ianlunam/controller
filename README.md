@@ -7,11 +7,16 @@
 * SKU: MPI3501
 * Touch Chipset: XPT2046
 * Driver IC: ILI9486
+* AHT25
 
 ## In My Project
 
 * Library: TFT_eSPI
 * TFT_eSPI User Setup: [Setup11_RPi_touch_ILI9486.h][def3]
+* Adafruit_AHTX0
+* Preferences
+* WiFi.h
+* PubSubClient
 
 ## MPI3501 Pins
 
@@ -37,17 +42,21 @@ These took some working out. The above two reference documents each had some par
 
 ## ESP32 Connections
 
-| ESP32 Pin | Display Pin |
-| --------- | ----------- |
-| D23 | #19 Touch Panel Input MOSI |
-| 5 | #26 Touch Panel Touch Panel Chip Select TP_CS |
-| D19 | #21 Touch Panel Output MISO |
-| D18 | #23 Touch Panel Clock SCLK |
-| D4 | #22 Touch Panel Reset TP_RST |
-| D2 | #18 LCD Reset LCD_RST |
-| D15 | #24 LCD Chip Select LCD_CS |
-| VIN | #2 5v |
-| GND | #6 GND |
+| ESP32 Pin | Display Pin | AHT25 Pin |
+| --------- | ----------- | --------- |
+| D23 | #19 Touch Panel Input MOSI | |
+| 5 | #26 Touch Panel Touch Panel Chip Select TP_CS | |
+| D19 | #21 Touch Panel Output MISO | |
+| D18 | #23 Touch Panel Clock SCLK | |
+| D4 | #22 Touch Panel Reset TP_RST | |
+| D2 | #18 LCD Reset LCD_RST | |
+| D15 | #24 LCD Chip Select LCD_CS | |
+| VIN | #2 Display 5v | |
+| GND | #6 Display GND | |
+| 3.3v | | #1 VCC |
+| D22 | | #2 SDA |
+| GND | | #3 GND |
+| D21 | | #4 SDL |
 
 ## Code
 
